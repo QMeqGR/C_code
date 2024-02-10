@@ -1,0 +1,3 @@
+To compile:
+gcc ericlib.c powder.c -lm -o powder
+
