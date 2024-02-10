@@ -1,2 +1,2 @@
-# C_code
-C_code
+# Science codes written mostly in C
+powder -- compute powder diffraction patterns
