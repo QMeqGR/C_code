@@ -1,3 +1,55 @@
 To compile:
 gcc ericlib.c powder.c -lm -o powder
 
+````markdown
+Command line options (* indicates required):
+  -h --- help
+
+           **********************
+                Input options
+           **********************
+  -f -*- input filename
+  -F --- list file formats
+
+  -L --- read a,b,c and alpha,beta,gamma from file
+         (default off) usually input from command line
+  -P --- read prim lat input (default conventional cell)
+  -B --- read Biso values for each atom (default 1 ang^2)
+
+  -Q --- qmax (default 8)
+  -q --- qmin (default 0.100000)
+  -W --- q bin size tolerance (default 0.005)
+
+  -X --- simulate XRAY powder diffraction
+  -N --- simulate NEUTRON powder diffraction
+  -C --- use diffraction corrections (caution!) (default off)
+         Bragg-Brentano and Lorentz Polarization correction
+
+  -a -*- a lattice constant [angstroms] (default 1)
+  -b -*- b lattice constant (default a)
+  -c -*- c lattice constant (default a)
+
+  -s --- scale all lattice vectors by factor (default 1.0)
+  -K -*- make atom Z a non-scattering atom (default 0)
+  -A -*- make all atoms EXCEPT Z non-scattering (default 0)
+  -o -*- modify occupany of atom type Z (default off)
+         use: -o "Z1.nnn:Z2.nnn"
+         example: -o "12.099:3.400" means Z=12 has 99 per cent occupancy,
+         and Z=3 has 400 per cent occupancy.
+
+           **********************
+               Output options
+           **********************
+  -E --- quiet output (no header)
+  -t -*- output in two-theta (must enter a lambda (Cu=1.5405))
+  -z -*- z-shift (position correction in [mm]) (default 0.0)
+         (only works in two theta output mode)
+  -p -*- peak intensity tolerance (default 0.005)
+         as percentage of maximum peak intensity
+  -S -*- output peak intensity scale factor (default 1)
+  -l --- generate (hkl, multiplicity) list with peaks
+  -d -*- debug level (integer) (default 0..4=everything)
+````
+
+
+
